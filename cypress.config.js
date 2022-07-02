@@ -17,6 +17,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require("./cypress/plugins/index.js")(on, config);
     },
-    specPattern: "cypress/integration/**/*.{js,jsx,ts,tsx}",
+    specPattern: "cypress/integration/1-getting-started/*.js",
   },
 });
