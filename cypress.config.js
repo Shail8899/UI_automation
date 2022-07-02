@@ -11,7 +11,7 @@ module.exports = defineConfig({
   },
   reporter: "mochawesome",
   projectId: "aj4xf7",
-  integration: {
+  e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
