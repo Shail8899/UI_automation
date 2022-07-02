@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "test": "node ./node_modules/cypress/bin/cypress run"
+    "test": "node ./node_modules/cypress/bin/cypress run",
+    "headedTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --headed --browser chrome",
+    "headedSpecTest": "npm run test -- --headed --spec",
+    "recordDashboard": "npm run test -- --record --key 6fd6e7b9-11a1-48a9-976e-1b003221e139",
+    "mochawesome": "npm run test -- --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^9.7.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress": "^10.2.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3"
   }
 }
