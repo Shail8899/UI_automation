@@ -8,15 +8,20 @@
     "chromeTest": "npm run test -- --headed --browser chrome",
     "headedSpecTest": "npm run test -- --headed --spec",
     "recordDashboard": "npm run test -- --record --key 6fd6e7b9-11a1-48a9-976e-1b003221e139",
-    "mochawesome": "npm run test -- --reporter mochawesome"
+    "mochawesome": "npm run test -- --reporter mochawesome",
+    "cy:clientLogin": "npm run test -- --reporter mocha-allure-reporter",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "testAllure": "npm run cy:clientLogin && npm run report:allure"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "allure-commandline": "^2.17.2",
     "cypress": "^10.3.0",
     "cypress-iframe": "^1.0.1",
     "mocha": "^10.0.0",
+    "mocha-allure-reporter": "^1.4.0",
     "mochawesome": "^7.1.3"
   }
 }
